@@ -31,6 +31,8 @@ if [ -z "$USER_IS_ROOT" ]; then
     export MODULEPATH=$(@PKG@/libexec/addto --append MODULEPATH @PKG@/modulefiles/Core)
 
     export BASH_ENV=@PKG@/init/bash
+
+    export -f module
   fi
 
   . @PKG@/init/bash >/dev/null # Module Support
